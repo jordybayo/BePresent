@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module serverXMLRPC</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>serverXMLRPC</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/youngdevps/Desktop/BePresent-IUT/server/serverXMLRPC.py">/home/youngdevps/Desktop/BePresent-IUT/server/serverXMLRPC.py</a></font></td></tr></table>
+    <p><tt>A&nbsp;XML&nbsp;RPC&nbsp;server&nbsp;.<br>
+USAGE&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;module&nbsp;not&nbsp;in&nbsp;usage&nbsp;but&nbsp;#&nbsp;TODO&nbsp;in&nbsp;the&nbsp;future&nbsp;for&nbsp;structure&nbsp;data&nbsp;type&nbsp;tranfer</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="xmlrpc.server.html#SimpleXMLRPCRequestHandler">xmlrpc.server.SimpleXMLRPCRequestHandler</a>(<a href="http.server.html#BaseHTTPRequestHandler">http.server.BaseHTTPRequestHandler</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="serverXMLRPC.html#RequestHandler">RequestHandler</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RequestHandler">class <strong>RequestHandler</strong></a>(<a href="xmlrpc.server.html#SimpleXMLRPCRequestHandler">xmlrpc.server.SimpleXMLRPCRequestHandler</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#RequestHandler">RequestHandler</a>(request,&nbsp;client_address,&nbsp;server)<br>
+&nbsp;<br>
+Simple&nbsp;XML-RPC&nbsp;request&nbsp;handler&nbsp;class.<br>
+&nbsp;<br>
+Handles&nbsp;all&nbsp;HTTP&nbsp;POST&nbsp;requests&nbsp;and&nbsp;attempts&nbsp;to&nbsp;decode&nbsp;them&nbsp;as<br>
+XML-RPC&nbsp;requests.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="serverXMLRPC.html#RequestHandler">RequestHandler</a></dd>
+<dd><a href="xmlrpc.server.html#SimpleXMLRPCRequestHandler">xmlrpc.server.SimpleXMLRPCRequestHandler</a></dd>
+<dd><a href="http.server.html#BaseHTTPRequestHandler">http.server.BaseHTTPRequestHandler</a></dd>
+<dd><a href="socketserver.html#StreamRequestHandler">socketserver.StreamRequestHandler</a></dd>
+<dd><a href="socketserver.html#BaseRequestHandler">socketserver.BaseRequestHandler</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>rpc_paths</strong> = ('/RPC2',)</dl>
+
+<hr>
+Methods inherited from <a href="xmlrpc.server.html#SimpleXMLRPCRequestHandler">xmlrpc.server.SimpleXMLRPCRequestHandler</a>:<br>
+<dl><dt><a name="RequestHandler-accept_encodings"><strong>accept_encodings</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="RequestHandler-decode_request_content"><strong>decode_request_content</strong></a>(self, data)</dt></dl>
+
+<dl><dt><a name="RequestHandler-do_POST"><strong>do_POST</strong></a>(self)</dt><dd><tt>Handles&nbsp;the&nbsp;HTTP&nbsp;POST&nbsp;request.<br>
+&nbsp;<br>
+Attempts&nbsp;to&nbsp;interpret&nbsp;all&nbsp;HTTP&nbsp;POST&nbsp;requests&nbsp;as&nbsp;XML-RPC&nbsp;calls,<br>
+which&nbsp;are&nbsp;forwarded&nbsp;to&nbsp;the&nbsp;server's&nbsp;_dispatch&nbsp;method&nbsp;for&nbsp;handling.</tt></dd></dl>
+
+<dl><dt><a name="RequestHandler-is_rpc_path_valid"><strong>is_rpc_path_valid</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="RequestHandler-log_request"><strong>log_request</strong></a>(self, code='-', size='-')</dt><dd><tt>Selectively&nbsp;log&nbsp;an&nbsp;accepted&nbsp;request.</tt></dd></dl>
+
+<dl><dt><a name="RequestHandler-report_404"><strong>report_404</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="xmlrpc.server.html#SimpleXMLRPCRequestHandler">xmlrpc.server.SimpleXMLRPCRequestHandler</a>:<br>
+<dl><dt><strong>aepattern</strong> = re.compile('\n                            \\s* (...                     ', re.IGNORECASE|re.VERBOSE)</dl>
+
+<dl><dt><strong>disable_nagle_algorithm</strong> = True</dl>
+
+<dl><dt><strong>encode_threshold</strong> = 1400</dl>
+
+<dl><dt><strong>wbufsize</strong> = -1</dl>
+
+<hr>
+Methods inherited from <a href="http.server.html#BaseHTTPRequestHandler">http.server.BaseHTTPRequestHandler</a>:<br>
+<dl><dt><a name="RequestHandler-address_string"><strong>address_string</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;client&nbsp;address.</tt></dd></dl>
+
+<dl><dt><a name="RequestHandler-date_time_string"><strong>date_time_string</strong></a>(self, timestamp=None)</dt><dd><tt>Return&nbsp;the&nbsp;current&nbsp;date&nbsp;and&nbsp;time&nbsp;formatted&nbsp;for&nbsp;a&nbsp;message&nbsp;header.</tt></dd></dl>
+
+<dl><dt><a name="RequestHandler-end_headers"><strong>end_headers</strong></a>(self)</dt><dd><tt>Send&nbsp;the&nbsp;blank&nbsp;line&nbsp;ending&nbsp;the&nbsp;MIME&nbsp;headers.</tt></dd></dl>
+
+<dl><dt><a name="RequestHandler-flush_headers"><strong>flush_headers</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="RequestHandler-handle"><strong>handle</strong></a>(self)</dt><dd><tt>Handle&nbsp;multiple&nbsp;requests&nbsp;if&nbsp;necessary.</tt></dd></dl>
+
+<dl><dt><a name="RequestHandler-handle_expect_100"><strong>handle_expect_100</strong></a>(self)</dt><dd><tt>Decide&nbsp;what&nbsp;to&nbsp;do&nbsp;with&nbsp;an&nbsp;"Expect:&nbsp;100-continue"&nbsp;header.<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;client&nbsp;is&nbsp;expecting&nbsp;a&nbsp;100&nbsp;Continue&nbsp;response,&nbsp;we&nbsp;must<br>
+respond&nbsp;with&nbsp;either&nbsp;a&nbsp;100&nbsp;Continue&nbsp;or&nbsp;a&nbsp;final&nbsp;response&nbsp;before<br>
+waiting&nbsp;for&nbsp;the&nbsp;request&nbsp;body.&nbsp;The&nbsp;default&nbsp;is&nbsp;to&nbsp;always&nbsp;respond<br>
+with&nbsp;a&nbsp;100&nbsp;Continue.&nbsp;You&nbsp;can&nbsp;behave&nbsp;differently&nbsp;(for&nbsp;example,<br>
+reject&nbsp;unauthorized&nbsp;requests)&nbsp;by&nbsp;overriding&nbsp;this&nbsp;method.<br>
+&nbsp;<br>
+This&nbsp;method&nbsp;should&nbsp;either&nbsp;return&nbsp;True&nbsp;(possibly&nbsp;after&nbsp;sending<br>
+a&nbsp;100&nbsp;Continue&nbsp;response)&nbsp;or&nbsp;send&nbsp;an&nbsp;error&nbsp;response&nbsp;and&nbsp;return<br>
+False.</tt></dd></dl>
+
+<dl><dt><a name="RequestHandler-handle_one_request"><strong>handle_one_request</strong></a>(self)</dt><dd><tt>Handle&nbsp;a&nbsp;single&nbsp;HTTP&nbsp;request.<br>
+&nbsp;<br>
+You&nbsp;normally&nbsp;don't&nbsp;need&nbsp;to&nbsp;override&nbsp;this&nbsp;method;&nbsp;see&nbsp;the&nbsp;class<br>
+__doc__&nbsp;string&nbsp;for&nbsp;information&nbsp;on&nbsp;how&nbsp;to&nbsp;handle&nbsp;specific&nbsp;HTTP<br>
+commands&nbsp;such&nbsp;as&nbsp;GET&nbsp;and&nbsp;POST.</tt></dd></dl>
+
+<dl><dt><a name="RequestHandler-log_date_time_string"><strong>log_date_time_string</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;current&nbsp;time&nbsp;formatted&nbsp;for&nbsp;logging.</tt></dd></dl>
+
+<dl><dt><a name="RequestHandler-log_error"><strong>log_error</strong></a>(self, format, *args)</dt><dd><tt>Log&nbsp;an&nbsp;error.<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;called&nbsp;when&nbsp;a&nbsp;request&nbsp;cannot&nbsp;be&nbsp;fulfilled.&nbsp;&nbsp;By<br>
+default&nbsp;it&nbsp;passes&nbsp;the&nbsp;message&nbsp;on&nbsp;to&nbsp;<a href="#RequestHandler-log_message">log_message</a>().<br>
+&nbsp;<br>
+Arguments&nbsp;are&nbsp;the&nbsp;same&nbsp;as&nbsp;for&nbsp;<a href="#RequestHandler-log_message">log_message</a>().<br>
+&nbsp;<br>
+XXX&nbsp;This&nbsp;should&nbsp;go&nbsp;to&nbsp;the&nbsp;separate&nbsp;error&nbsp;log.</tt></dd></dl>
+
+<dl><dt><a name="RequestHandler-log_message"><strong>log_message</strong></a>(self, format, *args)</dt><dd><tt>Log&nbsp;an&nbsp;arbitrary&nbsp;message.<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;used&nbsp;by&nbsp;all&nbsp;other&nbsp;logging&nbsp;functions.&nbsp;&nbsp;Override<br>
+it&nbsp;if&nbsp;you&nbsp;have&nbsp;specific&nbsp;logging&nbsp;wishes.<br>
+&nbsp;<br>
+The&nbsp;first&nbsp;argument,&nbsp;FORMAT,&nbsp;is&nbsp;a&nbsp;format&nbsp;string&nbsp;for&nbsp;the<br>
+message&nbsp;to&nbsp;be&nbsp;logged.&nbsp;&nbsp;If&nbsp;the&nbsp;format&nbsp;string&nbsp;contains<br>
+any&nbsp;%&nbsp;escapes&nbsp;requiring&nbsp;parameters,&nbsp;they&nbsp;should&nbsp;be<br>
+specified&nbsp;as&nbsp;subsequent&nbsp;arguments&nbsp;(it's&nbsp;just&nbsp;like<br>
+printf!).<br>
+&nbsp;<br>
+The&nbsp;client&nbsp;ip&nbsp;and&nbsp;current&nbsp;date/time&nbsp;are&nbsp;prefixed&nbsp;to<br>
+every&nbsp;message.</tt></dd></dl>
+
+<dl><dt><a name="RequestHandler-parse_request"><strong>parse_request</strong></a>(self)</dt><dd><tt>Parse&nbsp;a&nbsp;request&nbsp;(internal).<br>
+&nbsp;<br>
+The&nbsp;request&nbsp;should&nbsp;be&nbsp;stored&nbsp;in&nbsp;self.<strong>raw_requestline</strong>;&nbsp;the&nbsp;results<br>
+are&nbsp;in&nbsp;self.<strong>command</strong>,&nbsp;self.<strong>path</strong>,&nbsp;self.<strong>request_version</strong>&nbsp;and<br>
+self.<strong>headers</strong>.<br>
+&nbsp;<br>
+Return&nbsp;True&nbsp;for&nbsp;success,&nbsp;False&nbsp;for&nbsp;failure;&nbsp;on&nbsp;failure,&nbsp;any&nbsp;relevant<br>
+error&nbsp;response&nbsp;has&nbsp;already&nbsp;been&nbsp;sent&nbsp;back.</tt></dd></dl>
+
+<dl><dt><a name="RequestHandler-send_error"><strong>send_error</strong></a>(self, code, message=None, explain=None)</dt><dd><tt>Send&nbsp;and&nbsp;log&nbsp;an&nbsp;error&nbsp;reply.<br>
+&nbsp;<br>
+Arguments&nbsp;are<br>
+*&nbsp;code:&nbsp;&nbsp;&nbsp;&nbsp;an&nbsp;HTTP&nbsp;error&nbsp;code<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;digits<br>
+*&nbsp;message:&nbsp;a&nbsp;simple&nbsp;optional&nbsp;1&nbsp;line&nbsp;reason&nbsp;phrase.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*(&nbsp;HTAB&nbsp;/&nbsp;SP&nbsp;/&nbsp;VCHAR&nbsp;/&nbsp;%x80-FF&nbsp;)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaults&nbsp;to&nbsp;short&nbsp;entry&nbsp;matching&nbsp;the&nbsp;response&nbsp;code<br>
+*&nbsp;explain:&nbsp;a&nbsp;detailed&nbsp;message&nbsp;defaults&nbsp;to&nbsp;the&nbsp;long&nbsp;entry<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matching&nbsp;the&nbsp;response&nbsp;code.<br>
+&nbsp;<br>
+This&nbsp;sends&nbsp;an&nbsp;error&nbsp;response&nbsp;(so&nbsp;it&nbsp;must&nbsp;be&nbsp;called&nbsp;before&nbsp;any<br>
+output&nbsp;has&nbsp;been&nbsp;generated),&nbsp;logs&nbsp;the&nbsp;error,&nbsp;and&nbsp;finally&nbsp;sends<br>
+a&nbsp;piece&nbsp;of&nbsp;HTML&nbsp;explaining&nbsp;the&nbsp;error&nbsp;to&nbsp;the&nbsp;user.</tt></dd></dl>
+
+<dl><dt><a name="RequestHandler-send_header"><strong>send_header</strong></a>(self, keyword, value)</dt><dd><tt>Send&nbsp;a&nbsp;MIME&nbsp;header&nbsp;to&nbsp;the&nbsp;headers&nbsp;buffer.</tt></dd></dl>
+
+<dl><dt><a name="RequestHandler-send_response"><strong>send_response</strong></a>(self, code, message=None)</dt><dd><tt>Add&nbsp;the&nbsp;response&nbsp;header&nbsp;to&nbsp;the&nbsp;headers&nbsp;buffer&nbsp;and&nbsp;log&nbsp;the<br>
+response&nbsp;code.<br>
+&nbsp;<br>
+Also&nbsp;send&nbsp;two&nbsp;standard&nbsp;headers&nbsp;with&nbsp;the&nbsp;server&nbsp;software<br>
+version&nbsp;and&nbsp;the&nbsp;current&nbsp;date.</tt></dd></dl>
+
+<dl><dt><a name="RequestHandler-send_response_only"><strong>send_response_only</strong></a>(self, code, message=None)</dt><dd><tt>Send&nbsp;the&nbsp;response&nbsp;header&nbsp;only.</tt></dd></dl>
+
+<dl><dt><a name="RequestHandler-version_string"><strong>version_string</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;server&nbsp;software&nbsp;version&nbsp;string.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="http.server.html#BaseHTTPRequestHandler">http.server.BaseHTTPRequestHandler</a>:<br>
+<dl><dt><strong>MessageClass</strong> = &lt;class 'http.client.HTTPMessage'&gt;</dl>
+
+<dl><dt><strong>default_request_version</strong> = 'HTTP/0.9'</dl>
+
+<dl><dt><strong>error_content_type</strong> = 'text/html;charset=utf-8'</dl>
+
+<dl><dt><strong>error_message_format</strong> = '&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN... %(code)s - %(explain)s.&lt;/p&gt;<font color="#c040c0">\n</font>    &lt;/body&gt;<font color="#c040c0">\n</font>&lt;/html&gt;<font color="#c040c0">\n</font>'</dl>
+
+<dl><dt><strong>monthname</strong> = [None, 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']</dl>
+
+<dl><dt><strong>protocol_version</strong> = 'HTTP/1.0'</dl>
+
+<dl><dt><strong>responses</strong> = {&lt;HTTPStatus.CONTINUE: 100&gt;: ('Continue', 'Request received, please continue'), &lt;HTTPStatus.SWITCHING_PROTOCOLS: 101&gt;: ('Switching Protocols', 'Switching to new protocol; obey Upgrade header'), &lt;HTTPStatus.PROCESSING: 102&gt;: ('Processing', ''), &lt;HTTPStatus.OK: 200&gt;: ('OK', 'Request fulfilled, document follows'), &lt;HTTPStatus.CREATED: 201&gt;: ('Created', 'Document created, URL follows'), &lt;HTTPStatus.ACCEPTED: 202&gt;: ('Accepted', 'Request accepted, processing continues off-line'), &lt;HTTPStatus.NON_AUTHORITATIVE_INFORMATION: 203&gt;: ('Non-Authoritative Information', 'Request fulfilled from cache'), &lt;HTTPStatus.NO_CONTENT: 204&gt;: ('No Content', 'Request fulfilled, nothing follows'), &lt;HTTPStatus.RESET_CONTENT: 205&gt;: ('Reset Content', 'Clear input form for further input'), &lt;HTTPStatus.PARTIAL_CONTENT: 206&gt;: ('Partial Content', 'Partial content follows'), ...}</dl>
+
+<dl><dt><strong>server_version</strong> = 'BaseHTTP/0.6'</dl>
+
+<dl><dt><strong>sys_version</strong> = 'Python/3.7.1'</dl>
+
+<dl><dt><strong>weekdayname</strong> = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']</dl>
+
+<hr>
+Methods inherited from <a href="socketserver.html#StreamRequestHandler">socketserver.StreamRequestHandler</a>:<br>
+<dl><dt><a name="RequestHandler-finish"><strong>finish</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="RequestHandler-setup"><strong>setup</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="socketserver.html#StreamRequestHandler">socketserver.StreamRequestHandler</a>:<br>
+<dl><dt><strong>rbufsize</strong> = -1</dl>
+
+<dl><dt><strong>timeout</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="socketserver.html#BaseRequestHandler">socketserver.BaseRequestHandler</a>:<br>
+<dl><dt><a name="RequestHandler-__init__"><strong>__init__</strong></a>(self, request, client_address, server)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="socketserver.html#BaseRequestHandler">socketserver.BaseRequestHandler</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-main"><strong>main</strong></a>()</dt></dl>
+</td></tr></table>
+</body></html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module trainer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>trainer</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/youngdevps/Desktop/BePresent-IUT/raspberryPi/controler/trainer.py">/home/youngdevps/Desktop/BePresent-IUT/raspberryPi/controler/trainer.py</a></font></td></tr></table>
+    <p><tt>A&nbsp;Face&nbsp;recognition&nbsp;Module&nbsp;based&nbsp;on&nbsp;Opencv&nbsp;.<br>
+&nbsp;<br>
+IMPORTS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Opencv&nbsp;or&nbsp;cv2<br>
+&nbsp;<br>
+&nbsp;<br>
+FUNCTIONS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="#-assure_path_exists">assure_path_exists</a>(path)<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="#-getImagesAndLabels">getImagesAndLabels</a>(path)<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="#-entrainer">entrainer</a>()</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="PIL.Image.html">PIL.Image</a><br>
+</td><td width="25%" valign=top><a href="cv2.cv2.html">cv2.cv2</a><br>
+</td><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-assure_path_exists"><strong>assure_path_exists</strong></a>(path)</dt><dd><tt>Functions&nbsp;responsible&nbsp;to&nbsp;verify&nbsp;if&nbsp;the&nbsp;path&nbsp;exist&nbsp;really<br>
+&nbsp;<br>
+ARGS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;path&nbsp;.&nbsp;Type:String<br>
+&nbsp;<br>
+RETURNS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-</tt></dd></dl>
+ <dl><dt><a name="-entrainer"><strong>entrainer</strong></a>()</dt><dd><tt>Functions&nbsp;responsible&nbsp;to&nbsp;take&nbsp;all&nbsp;the&nbsp;images&nbsp;in&nbsp;the&nbsp;path<br>
+and&nbsp;train&nbsp;them&nbsp;with&nbsp;unique&nbsp;Ids&nbsp;for&nbsp;a&nbsp;future&nbsp;train&nbsp;then&nbsp;save<br>
+the&nbsp;trainngs&nbsp;in&nbsp;the&nbsp;.yaml&nbsp;trainer&nbsp;file<br>
+&nbsp;<br>
+ARGS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;path&nbsp;.&nbsp;Type:String<br>
+&nbsp;<br>
+RETURNS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;(faceSamples,&nbsp;ids)&nbsp;.&nbsp;Type:&nbsp;Tuple</tt></dd></dl>
+ <dl><dt><a name="-getImagesAndLabels"><strong>getImagesAndLabels</strong></a>(path)</dt><dd><tt>Functions&nbsp;responsible&nbsp;to&nbsp;&nbsp;::<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Open&nbsp;each&nbsp;photo<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Identified&nbsp;faces&nbsp;in&nbsp;the&nbsp;frame<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;manage&nbsp;IDs<br>
+&nbsp;<br>
+ARGS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;path&nbsp;.&nbsp;Type:String<br>
+&nbsp;<br>
+RETURNS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;(faceSamples,&nbsp;ids)&nbsp;.&nbsp;Type:&nbsp;Tuple</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>detector</strong> = &lt;CascadeClassifier 0x7fb57f67e210&gt;<br>
+<strong>recognizer</strong> = &lt;face_LBPHFaceRecognizer 0x7fb594542530&gt;</td></tr></table>
+</body></html>

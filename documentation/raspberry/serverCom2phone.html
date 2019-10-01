@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module serverCom2phone</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>serverCom2phone</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/youngdevps/Desktop/BePresent-IUT/raspberryPi/serverCom2phone.py">/home/youngdevps/Desktop/BePresent-IUT/raspberryPi/serverCom2phone.py</a></font></td></tr></table>
+    <p><tt>A&nbsp;raspberry&nbsp;pi&nbsp;Server&nbsp;module&nbsp;that&nbsp;accept&nbsp;phones'connections&nbsp;and&nbsp;communicate&nbsp;with&nbsp;tem.<br>
+&nbsp;<br>
+IMPORTS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;socket<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;threading<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;time<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;select<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;com2server&nbsp;(project&nbsp;module)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;controler.detector&nbsp;as&nbsp;faceDetector&nbsp;(project&nbsp;module)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;os<br>
+&nbsp;<br>
+&nbsp;<br>
+FUNCTIONS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;reconnaitre()<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;finReconn()<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;verifier()<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;assure_path_exists(path)</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="com2server.html">com2server</a><br>
+<a href="controler.detector.html">controler.detector</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="select.html">select</a><br>
+</td><td width="25%" valign=top><a href="socket.html">socket</a><br>
+<a href="threading.html">threading</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-bind_socket"><strong>bind_socket</strong></a>()</dt><dd><tt>Functions&nbsp;responsible&nbsp;to&nbsp;bind&nbsp;raspberry&nbsp;server&nbsp;await&nbsp;socket<br>
+&nbsp;<br>
+ARGS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-<br>
+&nbsp;<br>
+RETURNS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-</tt></dd></dl>
+ <dl><dt><a name="-create_socket"><strong>create_socket</strong></a>()</dt><dd><tt>Functions&nbsp;responsible&nbsp;to&nbsp;set&nbsp;the&nbsp;global&nbsp;variables&nbsp;of&nbsp;connection<br>
+&nbsp;<br>
+ARGS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-<br>
+&nbsp;<br>
+RETURNS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-</tt></dd></dl>
+ <dl><dt><a name="-interpreter"><strong>interpreter</strong></a>(conn, msg)</dt><dd><tt>Functions&nbsp;responsible&nbsp;to&nbsp;::<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;interprete&nbsp;the&nbsp;message<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;determine&nbsp;the&nbsp;sender&nbsp;with&nbsp;the&nbsp;flag&nbsp;string&nbsp;'phone'<br>
+&nbsp;<br>
+ARGS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;conn&nbsp;.&nbsp;Type:&nbsp;socket&nbsp;typ<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;msg<br>
+&nbsp;<br>
+RETURNS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><tt>Functions&nbsp;responsible&nbsp;to&nbsp;run&nbsp;all&nbsp;the&nbsp;function&nbsp;required&nbsp;to&nbsp;launch&nbsp;server<br>
+&nbsp;<br>
+ARGS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-<br>
+&nbsp;<br>
+RETURNS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-</tt></dd></dl>
+ <dl><dt><a name="-quit_gracefully"><strong>quit_gracefully</strong></a>(conn)</dt><dd><tt>Functions&nbsp;responsible&nbsp;to&nbsp;end&nbsp;connection&nbsp;with&nbsp;a&nbsp;client&nbsp;by&nbsp;poping&nbsp;it&nbsp;dron&nbsp;the&nbsp;list&nbsp;items<br>
+&nbsp;<br>
+ARGS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;conn&nbsp;.&nbsp;Type:&nbsp;socket&nbsp;type<br>
+&nbsp;<br>
+RETURNS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-</tt></dd></dl>
+ <dl><dt><a name="-receive_command"><strong>receive_command</strong></a>()</dt><dd><tt>Functions&nbsp;responsible&nbsp;to&nbsp;receive&nbsp;message&nbsp;and&nbsp;send&nbsp;it&nbsp;to&nbsp;the&nbsp;interpreter<br>
+&nbsp;<br>
+ARGS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-<br>
+&nbsp;<br>
+RETURNS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-</tt></dd></dl>
+ <dl><dt><a name="-send_command"><strong>send_command</strong></a>(conn, msg)</dt><dd><tt>#&nbsp;send&nbsp;commad&nbsp;to&nbsp;the&nbsp;client/victim&nbsp;or&nbsp;a&nbsp;friend</tt></dd></dl>
+ <dl><dt><a name="-socket_accept"><strong>socket_accept</strong></a>()</dt><dd><tt>Functions&nbsp;responsible&nbsp;to&nbsp;bind&nbsp;and&nbsp;wait&nbsp;for&nbsp;incommings&nbsp;connections&nbsp;before&nbsp;accept<br>
+&nbsp;<br>
+ARGS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-<br>
+&nbsp;<br>
+RETURNS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>CLIENT_IP</strong> = []<br>
+<strong>all_connection</strong> = []<br>
+<strong>host</strong> = ''<br>
+<strong>my_lock</strong> = &lt;unlocked _thread.RLock object owner=0 count=0&gt;<br>
+<strong>port</strong> = 12803<br>
+<strong>s</strong> = None</td></tr></table>
+</body></html>

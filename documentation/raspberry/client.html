@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module client</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>client</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/youngdevps/Desktop/BePresent-IUT/raspberryPi/client.py">/home/youngdevps/Desktop/BePresent-IUT/raspberryPi/client.py</a></font></td></tr></table>
+    <p><tt>A&nbsp;client&nbsp;module&nbsp;that&nbsp;connect&nbsp;to&nbsp;the&nbsp;server&nbsp;and&nbsp;make&nbsp;to&nbsp;perform&nbsp;send/receive.<br>
+&nbsp;<br>
+IMPORTS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;socket<br>
+&nbsp;<br>
+FUNCTIONS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="#-socket_bind_connect">socket_bind_connect</a>()<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="#-socket_send_recv">socket_send_recv</a>(msg)<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="#-socket_close">socket_close</a>()<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="#-main">main</a>()</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="socket.html">socket</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><tt>Functions&nbsp;responsible&nbsp;to&nbsp;::<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;bind&nbsp;or&nbsp;connect&nbsp;to&nbsp;the&nbsp;server&nbsp;connection<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;and&nbsp;while&nbsp;is&nbsp;True&nbsp;perform&nbsp;an&nbsp;await&nbsp;function&nbsp;to&nbsp;see&nbsp;if&nbsp;a&nbsp;message&nbsp;has&nbsp;been&nbsp;sended&nbsp;or&nbsp;send&nbsp;a&nbsp;message<br>
+&nbsp;<br>
+ARGS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-<br>
+&nbsp;<br>
+RETURNS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-</tt></dd></dl>
+ <dl><dt><a name="-socket_bind_connect"><strong>socket_bind_connect</strong></a>()</dt><dd><tt>Functions&nbsp;responsible&nbsp;to&nbsp;bind&nbsp;connection&nbsp;to&nbsp;a&nbsp;specific&nbsp;server&nbsp;await<br>
+&nbsp;<br>
+ARGS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-<br>
+&nbsp;<br>
+RETURNS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-</tt></dd></dl>
+ <dl><dt><a name="-socket_close"><strong>socket_close</strong></a>()</dt><dd><tt>Functions&nbsp;responsible&nbsp;to&nbsp;quit&nbsp;the&nbsp;server&nbsp;connection<br>
+&nbsp;<br>
+ARGS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-<br>
+&nbsp;<br>
+RETURNS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-</tt></dd></dl>
+ <dl><dt><a name="-socket_send_recv"><strong>socket_send_recv</strong></a>(msg)</dt><dd><tt>Functions&nbsp;responsible&nbsp;to&nbsp;receive&nbsp;and&nbsp;send&nbsp;data&nbsp;to&nbsp;the&nbsp;server&nbsp;that&nbsp;have&nbsp;been&nbsp;connected&nbsp;to&nbsp;::<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-it&nbsp;encode&nbsp;each&nbsp;message&nbsp;to&nbsp;send&nbsp;with&nbsp;a&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;'rasp'&nbsp;which&nbsp;mean&nbsp;raspberry&nbsp;to&nbsp;make&nbsp;the&nbsp;server&nbsp;identified&nbsp;the&nbsp;sender<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Launch&nbsp;the&nbsp;quit&nbsp;server&nbsp;connection&nbsp;server&nbsp;(<a href="#-socket_close">socket_close</a>())<br>
+&nbsp;<br>
+ARGS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;msg&nbsp;.&nbsp;Type:String<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;arg&nbsp;is&nbsp;the&nbsp;message&nbsp;we&nbsp;want&nbsp;to&nbsp;send<br>
+&nbsp;<br>
+RETURNS&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>connexion_avec_server</strong> = None<br>
+<strong>hote</strong> = 'localhost'<br>
+<strong>msg_a_envoyer</strong> = b''<br>
+<strong>port</strong> = 12800</td></tr></table>
+</body></html>

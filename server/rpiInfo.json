@@ -1,0 +1,8 @@
+[
+	{
+		"rpi name" : "pi",
+		"passwd" : "root",
+		"staticIp" : "10.45.0.145",
+		"macAdrr" : "b8:27:eb:c2:42:14"
+	}
+]
